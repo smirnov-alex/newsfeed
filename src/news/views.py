@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse_lazy
+# from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login, logout
 from django.contrib import messages
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator
 from django.core.mail import send_mail
 from django.views.generic import ListView, DetailView, CreateView
 from .forms import NewsForm, UserRegisterForm, UserLoginForm, ContactForm
