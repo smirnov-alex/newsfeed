@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+{{ mixin_prop }}
 {% for item in news %}
 <div class="card mb-3">
     <div class="card-header">
@@ -19,7 +20,7 @@
             {% endif %}
             <div class="media-body">
                 <h5 class="card-title">{{ item.title }}</h5>
-                <p class="card-text">{{ item.content|linebreaksbr|truncatewords:50 }}</p>
+                <p class="card-text">{{ item.content|safe|linebreaksbr|truncatewords:50 }}</p>
                 <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Read more...</a>
             </div>
         </div>
